@@ -1,0 +1,19 @@
+.done-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  padding: 5px 40px;
+  font-family: "Secular One", sans-serif;;
+  cursor: pointer;
+  background: white;
+  border: 1px solid gray;
+  transition: box-shadow 0.15s;
+}
+
+.done-button:hover {
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.done-button:active {
+  background: rgb(230, 230, 230);
+}
