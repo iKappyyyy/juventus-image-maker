@@ -4,7 +4,7 @@ import { SoccerField } from "./SoccerField";
 import { ChooseLayoutButton } from "./ChooseLayoutButton";
 import './HomePage.css';
 
-export function HomePage() {
+export function HomePage({ playerAmount }) {
   const [layoutIndex, setLayoutIndex] = useState(0);
   const layoutOptions = [
     '4-4-2',
@@ -23,7 +23,7 @@ export function HomePage() {
         setLayoutIndex={setLayoutIndex}
         layoutOptions={layoutOptions}
       />
-      <SoccerField layout={chosenLayout} />
+      <SoccerField layout={chosenLayout} playerAmount={playerAmount} />
       <ChooseLayoutButton layout={chosenLayout} />
     </>
   );

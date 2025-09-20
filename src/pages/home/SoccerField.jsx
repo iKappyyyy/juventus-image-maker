@@ -2,19 +2,16 @@ import layoutPositions from '../../data/layoutPositions'
 import SoccerFieldBackground from '../../assets/soccerFieldBackground.png';
 import './SoccerField.css';
 
-const PLAYER_AMOUNT = 11;
-
-export function SoccerField({ layout }) {
+export function SoccerField({ layout, playerAmount }) {
   const layoutPosition = layoutPositions[layout];
   const players = [];
-  for (let i = 0; i < PLAYER_AMOUNT; i++) {
+  for (let i = 0; i < playerAmount; i++) {
     const playerId = `player${i + 1}`;
 
     players.push(
       <div
-        className="player js-player"
-        id={playerId}
-        key={playerId}
+        className="player"
+        key={`homepage-soccerfield-${playerId}`}
         style={{
           gridRow: layoutPosition[playerId].row,
           gridColumn: layoutPosition[playerId].column,
