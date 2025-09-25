@@ -1,166 +1,33 @@
 .image-content {
-  width: 600px;
-  height: 800px;
-  /* border: 1px solid black; */
-  box-shadow: 5px 5px 0;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.5);
+  width: min(90vw, 600px); /* scales down with viewport, max 600px */
+  aspect-ratio: 1 / 1; /* keeps perfect square */
   
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
+  background-image: url('images/backgrounds/official/championsleague.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
-  /* justify-items: center; */
-  column-gap: 30px;
-  box-sizing: border-box;
-  padding: 200px 90px 60px 90px;
+  place-items: center;
+  position: relative;
+}
+
+.players-grid {
+  display: grid;
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  height: 72%;
+
+  column-gap: 2vw; /* scales with screen size */
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(50, 1fr);
-  position: relative;
-  /* overflow: hidden; */
+  box-sizing: border-box;
 }
 
-.background-image {
+.coach-image {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  object-position: center;
-}
-
-/* .card {
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
-} */
-
-.head {
-  width: 100%;
-  transition: opacity 0.15s ease;
-}
-
-.head:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.head:active {
-  opacity: 0.7;
-}
-
-.player {
-  max-width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media ((min-width: 450.1px) and (max-width: 600px)) or ((max-height: 920px)) {
-  .image-content {
-    width: 450px;
-    height: 600px;
-
-    column-gap: 10px;
-    padding: 155px 50px 50px 50px;
-  }
-
-  .head {
-    width: 80%;
-  }
-
-  .change-background {
-    padding: 5px 20px;
-    font-size: 1rem;
-  }
-
-  .background-choices {
-    top: 39px;
-  }
-
-  #estimated-title {
-    line-height: 15px;
-  }
-
-  #estimated-container {
-    left: 10px;
-    width: 100px;
-    top: 50px;
-  }
-
-  #estimated {
-    width: 30px;
-    height: 30px; 
-  }
-}
-
-@media (min-width: 300.1px) and (max-width: 450px) {
-  .image-content {
-    width: 300px;
-    height: 400px;
-
-    column-gap: 15px;
-    padding: 100px 40px 30px 40px;
-  }
-
-  .head {
-    width: 90%;
-  }
-
-  .change-background {
-    padding: 3px 15px;
-    font-size: 0.8rem;
-  }
-  
-  .background-choices {
-    top: 31px;
-  }
-
-  #estimated-container {
-    top: 35px;
-    font-size: 14px;
-    left: 8px;
-    width: 80px;
-  }
-
-  #estimated {
-    width: 25px;
-    height: 25px; 
-  }
-}
-
-@media (max-width: 300px) {
-  .image-content {
-    width: 225px;
-    height: 300px;
-
-    column-gap: 15px;
-    padding: 80px 25px 25px 25px;
-  }
-
-  .head {
-    width: 90%;
-  }
-
-  .change-background {
-    padding: 3px 15px;
-    font-size: 0.8rem;
-  }
-
-  .background-choices {
-    top: 31px;
-  }
-
-  #estimated-title {
-    line-height: 12px;
-    font-size: 13px;
-  }
-
-  #estimated-container {
-    top: 35px;
-    left: 8px;
-    width: 78px;
-  }
-
-  #estimated {
-    width: 20px;
-    height: 20px;
-  }
+  top: 1%;
+  left: 1%;
+  width: clamp(1.875rem, 0.1849rem + 8.4507vw, 3.75rem);
 }

@@ -1,0 +1,76 @@
+#change-background-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+}
+
+#change-background-button,
+#estimated-layout-container {
+  padding: 10px 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(50, 101, 54);
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.405);
+  transition: background-color 75ms;
+}
+
+#estimated-layout-container {
+  padding-inline: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(50, 101, 54);
+  background-color: white;
+}
+
+#change-background-button:active {
+  background-color: rgb(41, 83, 45);
+}
+
+#estimated-layout-container:active {
+  background-color: rgb(235, 235, 235);
+}
+
+#estimated-layout-input {
+  width: 20px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid red;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* background-options */
+
+.background-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.background-option>img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.background-option > span {
+  position: absolute;
+  background: white;
+  padding: 5px 10px;
+  bottom: 5px;
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.405);
+  transition: bottom 150ms ease;
+  text-align: center;
+}
+
+.background-option:hover > span {
+  bottom: 15px;
+}

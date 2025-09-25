@@ -1,49 +1,29 @@
+import { useRef } from 'react';
 import { useSearchParams } from 'react-router';
-import { ChangeBackgroundMenu } from './ChangeBackgroundMenu';
-import { ChangePlayerMenu } from './ChangePlayerMenu';
-import { ScreenshotButton } from './ScreenshotButton';
-import photoPositions from '../../data/photoPositions';
-import NoChoicePhoto from '../../assets/nochoice.webp';
-import photoo from '../../assets/backgrounds/championsLeague.webp';
+import { PopupProvider } from '../../components/PopupProvider';
+import { Players } from './Players';
+import { PlayingTeamsButtons } from './buttons/PlayingTeamsButtons';
+import { ButtonsRow } from './buttons/ButtonsRow';
 import './PhotoPage.css';
 
-// this defines how many rows one card is gonna take
-const CARD_ROW_LENGTH = 10;
-
 export function PhotoPage({ playerAmount }) {
+  const imageContentRef = useRef(null);
+  const coachImageRef = useRef(null);
   const [searchParams] = useSearchParams();
   const layoutString = searchParams.get('layout');
-  const photoPosition = photoPositions[layoutString];
-
-  const players = [];
-  for (let i = 0; i < playerAmount; i++) {
-    const playerId = `player${i + 1}`;
-
-    players.push(
-      <div
-        className="player"
-        key={`photopage-choose-${playerId}`}
-        data-player=""
-        style={{
-          gridRow: `${photoPosition[playerId].row} / ${photoPosition[playerId].row + CARD_ROW_LENGTH}`,
-          gridColumn: photoPosition[playerId].column,
-        }}
-      >
-        <img src={NoChoicePhoto} className="head" />
-      </div>
-    )
-  }
 
   return (
-    <>
-      <div className="image-content js-image-content">
-        <img className="background-image js-background-image" src={photoo} />
-        {players}
-        <ChangeBackgroundMenu />
+    <PopupProvider>
+      <div className="image-content" ref={imageContentRef}>
+        <div className="players-grid">
+          <Players layoutString={layoutString} playerAmount={playerAmount} /> 
+        </div>
+
+        <img className="coach-image" ref={coachImageRef} />
+        <PlayingTeamsButtons imageContentRef={imageContentRef} />
       </div>
 
-      <ChangePlayerMenu />
-      <ScreenshotButton />
-    </>
+      <ButtonsRow imageContentRef={imageContentRef} coachImageRef={coachImageRef} />
+    </PopupProvider>
   );
 }

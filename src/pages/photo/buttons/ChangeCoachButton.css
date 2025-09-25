@@ -1,0 +1,22 @@
+#change-coach-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(162, 153, 14);
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.405);
+  transition: background-color 75ms;
+}
+
+#change-coach-button:active {
+  background-color: rgb(140, 132, 12);
+}
+
+.coach-option {
+  height: 250px;
+}

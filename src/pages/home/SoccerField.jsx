@@ -1,5 +1,5 @@
-import layoutPositions from '../../data/layoutPositions'
-import SoccerFieldBackground from '../../assets/soccerFieldBackground.png';
+import { layoutPositions } from '../../data/layoutPositions'
+import SoccerFieldBackground from '../../assets/soccerFieldBackground.webp';
 import './SoccerField.css';
 
 export function SoccerField({ layout, playerAmount }) {

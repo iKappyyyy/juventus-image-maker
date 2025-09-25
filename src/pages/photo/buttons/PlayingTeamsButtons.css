@@ -1,0 +1,28 @@
+.playing-teams-buttons-container {
+  display: flex;
+  gap: clamp(3.5rem, -0.5563rem + 20.2817vw, 8rem);
+  position: absolute;
+  top: clamp(0.3125rem, -0.3636rem + 3.3803vw, 1.0625rem);
+}
+
+.playing-teams-button {
+  width: clamp(2.5rem, 0.4155rem + 10.4225vw, 4.8125rem);
+  aspect-ratio: 1 / 1;
+  border-radius: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-logo {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.team-logo-option {
+  height: 150px;
+}
