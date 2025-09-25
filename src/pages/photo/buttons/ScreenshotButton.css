@@ -23,7 +23,7 @@
   width: 1080px;
   box-shadow: none;
 
-  background-image: url('images/backgrounds/official/championsleague.webp');
+  background-image: url('/images/backgrounds/official/championsleague.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

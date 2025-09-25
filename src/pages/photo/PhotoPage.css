@@ -3,7 +3,7 @@
   aspect-ratio: 1 / 1; /* keeps perfect square */
   
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
-  background-image: url('images/backgrounds/official/championsleague.webp');
+  background-image: url('/images/backgrounds/official/championsleague.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
