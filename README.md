@@ -1,12 +1,32 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Juventus Israel Layout Image Maker 2.0 ⚽
 
-Currently, two official plugins are available:
+This is an app designed for Juventus Israel to be able to mass produce team composition images for up-coming games with ease.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pick your players, background & teams, and go on your way!
 
-## Expanding the ESLint configuration
+![Logo](https://ikappyyyy.github.io/projects/juvSoccerLayout/images/icon.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Features 🚀
+
+- Select players for the image
+- Choose a background from an abundance of pre-made custom images
+- Specify the opposing teams
+- Add the active coach to your image
+- Supports PC & Mobile
+- Content is all up to date
+
+## Tech Stack ⚙
+
+React, HTML, CSS, Javascript
+
+## Feedback 📝
+
+If you have any feedback, please reach out to us at the Juventus Israel whatsapp/telegram group!
+
+
+## Author 🥇
+
+- [@iKappyyyy](https://www.github.com/ikappyyyy)
+
