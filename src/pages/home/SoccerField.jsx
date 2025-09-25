@@ -1,6 +1,7 @@
 import { layoutPositions } from '../../data/layoutPositions'
 import SoccerFieldBackground from '../../assets/soccerFieldBackground.webp';
 import './SoccerField.css';
+// import './test.css';
 
 export function SoccerField({ layout, playerAmount }) {
   const layoutPosition = layoutPositions[layout];

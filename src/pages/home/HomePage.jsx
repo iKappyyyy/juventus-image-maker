@@ -3,7 +3,6 @@ import { LayoutPicker } from "./LayoutPicker";
 import { SoccerField } from "./SoccerField";
 import { ChooseLayoutButton } from "./ChooseLayoutButton";
 import { layoutOptions } from "../../data/layoutPositions";
-import './HomePage.css';
 
 export function HomePage({ playerAmount }) {
   const [layoutIndex, setLayoutIndex] = useState(0);

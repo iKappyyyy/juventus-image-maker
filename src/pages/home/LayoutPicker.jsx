@@ -18,7 +18,7 @@ export function LayoutPicker({ layoutIndex, setLayoutIndex, layoutOptions }) {
         <button className="cycle-arrow" onClick={handleLeft}>
           <i className="fa-solid fa-arrow-left"></i>
         </button>
-        <div className="cycle-option js-cycle-option">{layoutOptions[layoutIndex]}</div>
+        <div className="cycle-option">{layoutOptions[layoutIndex]}</div>
         <button className="cycle-arrow" onClick={handleRight}>
           <i className="fa-solid fa-arrow-right"></i>
         </button>
