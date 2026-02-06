@@ -97,9 +97,16 @@
   transition: box-shadow 150ms;
   object-fit: contain;
   object-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.popup-content>*:hover {
+/* .popup-content > *:not(:first-child):hover {
+  box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.405);
+} */
+
+.popup-content > *:hover {
   box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.405);
 }
 

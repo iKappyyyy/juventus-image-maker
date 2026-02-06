@@ -1,5 +1,6 @@
 const coaches = [
-  'tudor'
+  'tudor',
+  'spalletti'
 ];
 
 export default coaches;

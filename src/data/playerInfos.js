@@ -2,6 +2,7 @@ const playerInfos = [
   'perin',
   'digregorio',
   'pinsoglio',
+  'holm',
   'bremer',
   'gatti',
   'kelly',
@@ -21,6 +22,7 @@ const playerInfos = [
   'vlahovic',
   'yildiz',
   'zhegrova',
+  'boga',
   'milik',
   'openda',
   'david'

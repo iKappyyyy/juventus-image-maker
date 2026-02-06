@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { usePopup } from '../../../components/PopupProvider';
+import { usePopup } from '../../../components/popup/PopupProvider';
 import { backgroundNames, backgroundsInfo } from '../../../data/backgrounds';
 import './ChangeBackgroundButtons.css';
 
@@ -26,7 +26,10 @@ export function ChangeBackgroundButtons({ imageContentRef }) {
         <div
           className="background-option"
           key={`background-option-${i}`}
-          onClick={() => { imageContentRef.current.style.backgroundImage = `url('${imagesPath}/${currentBackground}.webp')` }}
+          onClick={() => {
+            imageContentRef.current.style.backgroundImage = `url('${imagesPath}/${currentBackground}.webp')`;
+            
+          }}
         >
           <img src={`${imagesPath}/${currentBackground}.webp`} alt={backgroundsInfo[currentBackground].alt} />
           <span>{backgroundsInfo[currentBackground].name}</span>

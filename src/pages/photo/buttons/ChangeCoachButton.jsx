@@ -1,4 +1,4 @@
-import { usePopup } from '../../../components/PopupProvider';
+import { usePopup } from '../../../components/popup/PopupProvider';
 import coaches from '../../../data/coaches';
 import './ChangeCoachButton.css';
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { usePopup } from '../../../components/PopupProvider';
+import { usePopup } from '../../../components/popup/PopupProvider';
 import { backgroundsInfo } from '../../../data/backgrounds';
 import teams from '../../../data/teams';
 import './PlayingTeamsButtons.css';

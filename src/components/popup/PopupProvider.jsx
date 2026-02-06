@@ -5,7 +5,12 @@ const PopupContext = createContext();
 export function PopupProvider({ children }) {
   const [popupData, setPopupData] = useState(null);
 
-  const openPopup = (title, content) => setPopupData({ title, content });
+  const openPopup = (title, content) => {
+    const localStorageKey = title.toLowerCase().replace(/\s+/g, '-');
+    
+    setPopupData({ title, content, localStorageKey });
+  };
+
   const closePopup = () => setPopupData(null);
 
   return (

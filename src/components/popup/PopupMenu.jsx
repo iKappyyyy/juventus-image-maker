@@ -1,10 +1,11 @@
 import React from 'react';
-import JuventusLogo from '../assets/JuvLogo.webp';
+import JuventusLogo from '../../assets/JuvLogo.webp';
 import { usePopup } from './PopupProvider';
+import { AddCustomDataButton } from './AddCustomDataButton';
 import './PopupMenu.css';
 
 export function PopupMenu({ title, children }) {
-  const { closePopup } = usePopup(); // get close function from context
+  const { closePopup } = usePopup();
 
   function handleChildClick(child) {
     return (event) => {
@@ -35,6 +36,7 @@ export function PopupMenu({ title, children }) {
         </button>
       </div>
       <div className="popup-content">
+        {/* <AddCustomDataButton /> */}
         {newChildren}
       </div>
     </div>
