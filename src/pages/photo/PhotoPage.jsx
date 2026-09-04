@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useSearchParams } from 'react-router';
-import { PopupProvider } from '../../components/popup/PopupProvider';
+import { PopupProvider } from '../../components/PopupProvider';
 import { Players } from './Players';
 import { PlayingTeamsButtons } from './buttons/PlayingTeamsButtons';
 import { ButtonsRow } from './buttons/ButtonsRow';

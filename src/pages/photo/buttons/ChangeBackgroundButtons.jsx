@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { usePopup } from '../../../components/popup/PopupProvider';
+import { usePopup } from '../../../components/PopupProvider';
 import { backgroundNames, backgroundsInfo } from '../../../data/backgrounds';
 import './ChangeBackgroundButtons.css';
 
@@ -14,7 +14,7 @@ export function ChangeBackgroundButtons({ imageContentRef }) {
     imageContentRef.current.style.backgroundImage = backgroundPath.replace(estimatedChecked ? 'estimated' : 'official', estimatedChecked ? 'official' : 'estimated');
 
     // background needs to be manually changed before estimated button starts working so this fixes that edge case
-    if (!backgroundPath) imageContentRef.current.style.backgroundImage = "url('images/backgrounds/estimated/championsleague.webp')"; 
+    if (!backgroundPath) imageContentRef.current.style.backgroundImage = "url('images/backgrounds/estimated/europaleague.webp')"; 
   }
   
   function handleChangeBackgroundButton() {
@@ -28,7 +28,8 @@ export function ChangeBackgroundButtons({ imageContentRef }) {
           key={`background-option-${i}`}
           onClick={() => {
             imageContentRef.current.style.backgroundImage = `url('${imagesPath}/${currentBackground}.webp')`;
-            
+            // remove team logos when changing background so that the user doesn't forget to change them and they don't get stuck with the wrong logos
+            imageContentRef.current.querySelectorAll('.team-logo').forEach(logo => logo.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=');
           }}
         >
           <img src={`${imagesPath}/${currentBackground}.webp`} alt={backgroundsInfo[currentBackground].alt} />

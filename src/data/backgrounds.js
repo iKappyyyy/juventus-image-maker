@@ -1,17 +1,13 @@
 export const backgroundNames = [
-  'championsleague',
+  'europaleague',
   'coppaitalia',
   'seriea'
 ]
 
 export const backgroundsInfo = {
-  'championsleague': {
-    alt: 'champions league',
-    name: 'ליגת האלופות'
-  },
-  'clubworldcup': {
-    alt: 'club world cup',
-    name: 'גביע העולם למועדונים'
+  'europaleague': {
+    alt: 'europa league',
+    name: 'הליגה האירופית'
   },
   'coppaitalia': {
     alt: 'coppa italia',
@@ -21,8 +17,4 @@ export const backgroundsInfo = {
     alt: 'serie a',
     name: 'סרייה א'
   },
-  'supercup': {
-    alt: 'super cup',
-    name: 'סופר קופה'
-  }
 }

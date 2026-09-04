@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { usePopup } from '../../../components/popup/PopupProvider';
+import { usePopup } from '../../../components/PopupProvider';
 import { backgroundsInfo } from '../../../data/backgrounds';
 import teams from '../../../data/teams';
 import './PlayingTeamsButtons.css';
@@ -11,7 +11,7 @@ export function PlayingTeamsButtons({ imageContentRef }) {
   const { openPopup } = usePopup();
 
   function handleOpenPlayingTeamsMenu(setFunc) {
-    const imageUrl = imageContentRef.current.style.backgroundImage || 'image/backgrounds/official/championsleague.jpg';
+    const imageUrl = imageContentRef.current.style.backgroundImage || 'image/backgrounds/official/europaleague.webp';
     const filename = imageUrl.match(/([^/]+)(?=\.\w+['"]?\)?;?$)/)[1];
 
     const layoutLogoNames = teams[filename];

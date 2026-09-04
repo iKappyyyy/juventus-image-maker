@@ -1,5 +1,4 @@
 const coaches = [
-  'tudor',
   'spalletti'
 ];
 

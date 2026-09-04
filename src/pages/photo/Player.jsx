@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { usePopup } from '../../components/popup/PopupProvider';
+import { usePopup } from '../../components/PopupProvider';
 import playerInfos from '../../data/playerInfos';
 import NoChoicePhoto from '../../assets/nochoice.webp';
 import './Player.css';
