@@ -25,6 +25,16 @@ export function ScreenshotButton({ imageContentRef }) {
 
       document.body.appendChild(link);
       link.click();
+
+      // Copy image to clipboard
+      canvas.toBlob((blob) => {
+        navigator.clipboard.write([
+          new ClipboardItem({
+            "image/png": blob
+          })
+        ]);
+      }, "image/png");
+
       document.body.removeChild(link);
     }).catch(error => {
       console.log('לא הצלחנו לצלם את התמונה כרגע, נסה שוב מאוחר יותר');

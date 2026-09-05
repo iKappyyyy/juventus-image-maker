@@ -15,6 +15,7 @@ const playerInfos = [
   'dluiz',
   'thuram',
   'cambiaso',
+  'mckennie',
   'papesarr',
   'conceicao',
   'kmuani',
