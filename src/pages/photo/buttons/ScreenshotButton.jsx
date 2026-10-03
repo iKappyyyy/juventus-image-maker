@@ -12,6 +12,14 @@ export function ScreenshotButton({ imageContentRef }) {
     photo.style.backgroundImage = imageContentRef.current.style.backgroundImage;
     document.body.append(photo);
 
+    photo.querySelectorAll('.team-logo').forEach((logo, i) => {
+      if (!i) {
+        logo.id = 'left-team-logo';
+      } else {
+        logo.id = 'right-team-logo';
+      }
+    });
+
     // Take screenshot
     html2canvas(photo, { scale: 2 }).then((canvas) => {
       const imageUrl = canvas.toDataURL("image/png");

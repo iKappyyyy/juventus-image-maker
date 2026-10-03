@@ -46,6 +46,16 @@
   height: 115px;
 }
 
+@supports (-webkit-text-size-adjust: none) and (font: -apple-system-body) {
+  .final-photo #left-team-logo {
+    margin-right: 23px;
+  }
+
+  .final-photo #right-team-logo {
+    margin-left: 23px;
+  }
+}
+
 .final-photo .coach-image {
   width: 120px;
 }
